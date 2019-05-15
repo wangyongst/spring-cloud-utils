@@ -30,13 +30,6 @@ public class ResultUtil {
         return result;
     }
 
-    public static Result isHystric(String serviceName) {
-        Result result = new Result();
-        result.setCode(ResultCode.HYSTRIC);
-        result.setMessage(serviceName + "服务访问失败，请联系管理员！");
-        return result;
-    }
-
     public static Result queryErrorWithDataAndMessage(Object data, String message) {
         Result result = new Result();
         result.setCode(ResultCode.QUERY_ERROR);
