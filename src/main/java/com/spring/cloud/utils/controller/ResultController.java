@@ -68,7 +68,7 @@ public class ResultController {
     }
 
     @ApiOperation(value = "参数错误结果带数据和消息")
-    @GetMapping(value = "deleteErrorWithDataAndMessage")
+    @GetMapping(value = "parameterErrorWithDataAndMessage")
     public Result parameterErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
         return ResultUtil.parameterErrorWithDataAndMessage(data, message);
     }
