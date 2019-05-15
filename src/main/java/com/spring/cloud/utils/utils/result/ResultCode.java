@@ -13,4 +13,9 @@ public class ResultCode {
     public final static int UPDATE_ERROR = 1004;
     //删除数据失败
     public final static int DELETE_ERROR = 1005;
+
+    //缺少必需参数
+    public final static int PARAMETER_NOT_ENOUGH = 10100;
+    //参数错误
+    public final static int PARAMETER_ERROR = 10101;
 }

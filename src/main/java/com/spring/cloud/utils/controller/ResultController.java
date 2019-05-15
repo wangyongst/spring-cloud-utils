@@ -60,4 +60,17 @@ public class ResultController {
         return ResultUtil.deleteErrorWithDataAndMessage(data, message);
     }
 
+
+    @ApiOperation(value = "缺少必需参数结果带数据和消息")
+    @GetMapping(value = "parameterNotEnoughWithDataAndMessage")
+    public Result parameterNotEnoughWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
+        return ResultUtil.parameterNotEnoughWithDataAndMessage(data, message);
+    }
+
+    @ApiOperation(value = "参数错误结果带数据和消息")
+    @GetMapping(value = "deleteErrorWithDataAndMessage")
+    public Result parameterErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
+        return ResultUtil.parameterErrorWithDataAndMessage(data, message);
+    }
+
 }

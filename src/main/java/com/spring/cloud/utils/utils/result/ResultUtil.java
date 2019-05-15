@@ -61,4 +61,20 @@ public class ResultUtil {
         result.setMessage(message);
         return result;
     }
+
+    public static Result parameterNotEnoughWithDataAndMessage(Object data, String message) {
+        Result result = new Result();
+        result.setCode(ResultCode.PARAMETER_NOT_ENOUGH);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result parameterErrorWithDataAndMessage(Object data, String message) {
+        Result result = new Result();
+        result.setCode(ResultCode.PARAMETER_ERROR);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
 }
