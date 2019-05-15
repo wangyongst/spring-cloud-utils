@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(tags= "返回结果工具类")
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/utils/result")
+@RequestMapping("/result")
 public class ResultController {
 
     @ApiOperation(value = "正确结果")
@@ -40,6 +40,30 @@ public class ResultController {
     @GetMapping(value = "isHystric")
     public Result isHystric(@RequestParam String serviceName) {
         return ResultUtil.isHystric(serviceName);
+    }
+
+    @ApiOperation(value = "查询失败结果带数据和消息")
+    @GetMapping(value = "queryErrorWithDataAndMessage")
+    public Result queryErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
+        return ResultUtil.queryErrorWithDataAndMessage(data, message);
+    }
+
+    @ApiOperation(value = "创建失败结果带数据和消息")
+    @GetMapping(value = "createErrorWithDataAndMessage")
+    public Result createErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
+        return ResultUtil.createErrorWithDataAndMessage(data, message);
+    }
+
+    @ApiOperation(value = "更新失败结果带数据和消息")
+    @GetMapping(value = "updateErrorWithDataAndMessage")
+    public Result updateErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
+        return ResultUtil.updateErrorWithDataAndMessage(data, message);
+    }
+
+    @ApiOperation(value = "删除失败结果带数据和消息")
+    @GetMapping(value = "deleteErrorWithDataAndMessage")
+    public Result deleteErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
+        return ResultUtil.deleteErrorWithDataAndMessage(data, message);
     }
 
 }

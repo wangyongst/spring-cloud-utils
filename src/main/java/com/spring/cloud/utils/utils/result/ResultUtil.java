@@ -36,4 +36,36 @@ public class ResultUtil {
         result.setMessage(serviceName + "服务访问失败，请联系管理员！");
         return result;
     }
+
+    public static Result queryErrorWithDataAndMessage(Object data, String message) {
+        Result result = new Result();
+        result.setCode(ResultCode.QUERY_ERROR);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result createErrorWithDataAndMessage(Object data, String message) {
+        Result result = new Result();
+        result.setCode(ResultCode.CREATE_ERROR);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result updateErrorWithDataAndMessage(Object data, String message) {
+        Result result = new Result();
+        result.setCode(ResultCode.UPDATE_ERROR);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result deleteErrorWithDataAndMessage(Object data, String message) {
+        Result result = new Result();
+        result.setCode(ResultCode.DELETE_ERROR);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
 }
