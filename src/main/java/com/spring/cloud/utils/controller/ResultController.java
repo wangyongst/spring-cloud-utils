@@ -36,12 +36,6 @@ public class ResultController {
         return ResultUtil.okWithDataAndMessage(data, message);
     }
 
-    @ApiOperation(value = "服务熔断结果")
-    @GetMapping(value = "isHystric")
-    public Result isHystric(@RequestParam String serviceName) {
-        return ResultUtil.isHystric(serviceName);
-    }
-
     @ApiOperation(value = "查询失败结果带数据和消息")
     @GetMapping(value = "queryErrorWithDataAndMessage")
     public Result queryErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
