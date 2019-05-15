@@ -6,39 +6,39 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
-@Api
+@Api(value = "返回结果工具类")
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/utils/result")
 public class ResultController {
 
-    @ApiOperation(value = "正确结果", notes = "提供用户注册服务")
+    @ApiOperation(value = "正确结果")
     @GetMapping(value = "ok")
-    public static Result ok() {
+    public Result ok() {
         return ResultUtil.ok();
     }
 
-    @ApiOperation(value = "用户注册服务", notes = "提供用户注册服务")
+    @ApiOperation(value = "正确结果带消息")
     @GetMapping(value = "okWithMessage")
-    public static Result okWithMessage(@RequestParam String message) {
+    public Result okWithMessage(@RequestParam String message) {
         return ResultUtil.okWithMessage(message);
     }
 
-    @ApiOperation(value = "用户注册服务", notes = "提供用户注册服务")
+    @ApiOperation(value = "正确结果带数据")
     @GetMapping(value = "okWithData")
-    public static Result okWithData(@RequestParam Object data) {
+    public Result okWithData(@RequestParam Object data) {
         return ResultUtil.okWithData(data);
     }
 
-    @ApiOperation(value = "用户注册服务", notes = "提供用户注册服务")
+    @ApiOperation(value = "正确结果带数据和消息")
     @GetMapping(value = "okWithDataAndMessage")
-    public static Result okWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
-        return ResultUtil.okWithDataAndMessage(data,message);
+    public Result okWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
+        return ResultUtil.okWithDataAndMessage(data, message);
     }
 
-    @ApiOperation(value = "用户注册服务", notes = "提供用户注册服务")
+    @ApiOperation(value = "服务熔断结果")
     @GetMapping(value = "isHystric")
-    public static Result isHystric(@RequestParam String serviceName) {
+    public Result isHystric(@RequestParam String serviceName) {
         return ResultUtil.isHystric(serviceName);
     }
 

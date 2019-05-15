@@ -25,14 +25,14 @@ public class Swagger2Configuration {
                 .enable(swaggerShow)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.spring.cloud.service.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.spring.cloud.utils.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("工具类微服务")
-                .description("基于SpringCloud2的全Restful工具类微服务，必须通过其它微服务项目或API项目使用，严禁前端直接调用")
+                .description("基于SpringCloud2的全Restful工具类微服务，必须通过其它微服务项目或API项目使用，严禁前端直接调用！")
                 .contact(new Contact("WangYong","","wangyongst@qq.com"))
                 .version("1.0")
                 .build();
