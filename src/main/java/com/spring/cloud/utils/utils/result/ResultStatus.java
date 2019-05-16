@@ -15,7 +15,14 @@ public class ResultStatus {
     public final static int DELETE_ERROR = 1005;
 
     //缺少必需参数
-    public final static int PARAMETER_NOT_ENOUGH = 10100;
+    public final static int PARAMETER_NOT_ENOUGH = 1010;
     //参数错误
-    public final static int PARAMETER_ERROR = 10101;
+    public final static int PARAMETER_ERROR = 1011;
+
+
+    //REST_CLIENT_EXCEPTION 异常
+    public final static int REST_CLIENT_EXCEPTION = 1020;
+
+    //结果为空异常
+    public final static int IS_NULL_EXCEPTION = 1030;
 }

@@ -8,6 +8,14 @@ public class ResultUtil {
         return result;
     }
 
+    public static Result okWithDataAndMessage(String data, String message) {
+        Result result = new Result();
+        result.setStatus(ResultStatus.OK);
+        result.setData(data);
+        result.setMessage(message);
+        return result;
+    }
+
     public static Result okWithMessage(String message) {
         Result result = new Result();
         result.setStatus(ResultStatus.OK);
@@ -54,6 +62,29 @@ public class ResultUtil {
     public static Result parameterErrorWithMessage(String message) {
         Result result = new Result();
         result.setStatus(ResultStatus.PARAMETER_ERROR);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result restClientExceptionWithUrlAndMessage(String url, String message) {
+        Result result = new Result();
+        result.setStatus(ResultStatus.REST_CLIENT_EXCEPTION);
+        result.setData(url);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result isNullExceptionWithMessage(String message) {
+        Result result = new Result();
+        result.setStatus(ResultStatus.IS_NULL_EXCEPTION);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result isNullExceptionWithUrlAndMessage(String data, String message) {
+        Result result = new Result();
+        result.setStatus(ResultStatus.IS_NULL_EXCEPTION);
+        result.setData(data);
         result.setMessage(message);
         return result;
     }

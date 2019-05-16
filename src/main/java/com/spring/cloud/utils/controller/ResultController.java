@@ -61,4 +61,10 @@ public class ResultController {
         return ResultUtil.parameterErrorWithMessage(message);
     }
 
+    @ApiOperation(value = "结果为空异常带消息")
+    @GetMapping(value = "isNullExceptionWithMessage")
+    public Result isNullExceptionWithMessage(@RequestParam String message) {
+        return ResultUtil.isNullExceptionWithMessage(message);
+    }
+
 }
