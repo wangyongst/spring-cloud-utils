@@ -24,53 +24,41 @@ public class ResultController {
         return ResultUtil.okWithMessage(message);
     }
 
-    @ApiOperation(value = "正确结果带数据")
-    @GetMapping(value = "okWithData")
-    public Result okWithData(@RequestParam Object data) {
-        return ResultUtil.okWithData(data);
+    @ApiOperation(value = "查询失败结果带消息")
+    @GetMapping(value = "queryErrorWithMessage")
+    public Result queryErrorWithMessage(@RequestParam String message) {
+        return ResultUtil.queryErrorWithMessage(message);
     }
 
-    @ApiOperation(value = "正确结果带数据和消息")
-    @GetMapping(value = "okWithDataAndMessage")
-    public Result okWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
-        return ResultUtil.okWithDataAndMessage(data, message);
+    @ApiOperation(value = "创建失败结果带消息")
+    @GetMapping(value = "createErrorWithMessage")
+    public Result createErrorWithMessage(@RequestParam String message) {
+        return ResultUtil.createErrorWithMessage(message);
     }
 
-    @ApiOperation(value = "查询失败结果带数据和消息")
-    @GetMapping(value = "queryErrorWithDataAndMessage")
-    public Result queryErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
-        return ResultUtil.queryErrorWithDataAndMessage(data, message);
+    @ApiOperation(value = "更新失败结果带消息")
+    @GetMapping(value = "updateErrorWithMessage")
+    public Result updateErrorWithMessage(@RequestParam String message) {
+        return ResultUtil.updateErrorWithMessage(message);
     }
 
-    @ApiOperation(value = "创建失败结果带数据和消息")
-    @GetMapping(value = "createErrorWithDataAndMessage")
-    public Result createErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
-        return ResultUtil.createErrorWithDataAndMessage(data, message);
-    }
-
-    @ApiOperation(value = "更新失败结果带数据和消息")
-    @GetMapping(value = "updateErrorWithDataAndMessage")
-    public Result updateErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
-        return ResultUtil.updateErrorWithDataAndMessage(data, message);
-    }
-
-    @ApiOperation(value = "删除失败结果带数据和消息")
-    @GetMapping(value = "deleteErrorWithDataAndMessage")
-    public Result deleteErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
-        return ResultUtil.deleteErrorWithDataAndMessage(data, message);
+    @ApiOperation(value = "删除失败结果带消息")
+    @GetMapping(value = "deleteErrorWithMessage")
+    public Result deleteErrorWithMessage(@RequestParam String message) {
+        return ResultUtil.deleteErrorWithMessage(message);
     }
 
 
-    @ApiOperation(value = "缺少必需参数结果带数据和消息")
-    @GetMapping(value = "parameterNotEnoughWithDataAndMessage")
-    public Result parameterNotEnoughWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
-        return ResultUtil.parameterNotEnoughWithDataAndMessage(data, message);
+    @ApiOperation(value = "缺少必需参数结果带消息")
+    @GetMapping(value = "parameterNotEnoughWithMessage")
+    public Result parameterNotEnoughWithMessage(@RequestParam String message) {
+        return ResultUtil.parameterNotEnoughWithMessage(message);
     }
 
-    @ApiOperation(value = "参数错误结果带数据和消息")
-    @GetMapping(value = "parameterErrorWithDataAndMessage")
-    public Result parameterErrorWithDataAndMessage(@RequestParam Object data, @RequestParam String message) {
-        return ResultUtil.parameterErrorWithDataAndMessage(data, message);
+    @ApiOperation(value = "参数错误结果带消息")
+    @GetMapping(value = "parameterErrorWithMessage")
+    public Result parameterErrorWithMessage(@RequestParam String message) {
+        return ResultUtil.parameterErrorWithMessage(message);
     }
 
 }

@@ -15,65 +15,45 @@ public class ResultUtil {
         return result;
     }
 
-    public static Result okWithData(Object data) {
-        Result result = new Result();
-        result.setStatus(ResultStatus.OK);
-        result.setData(data);
-        return result;
-    }
 
-    public static Result okWithDataAndMessage(Object data, String message) {
-        Result result = new Result();
-        result.setStatus(ResultStatus.OK);
-        result.setData(data);
-        result.setMessage(message);
-        return result;
-    }
-
-    public static Result queryErrorWithDataAndMessage(Object data, String message) {
+    public static Result queryErrorWithMessage(String message) {
         Result result = new Result();
         result.setStatus(ResultStatus.QUERY_ERROR);
-        result.setData(data);
         result.setMessage(message);
         return result;
     }
 
-    public static Result createErrorWithDataAndMessage(Object data, String message) {
+    public static Result createErrorWithMessage(String message) {
         Result result = new Result();
         result.setStatus(ResultStatus.CREATE_ERROR);
-        result.setData(data);
         result.setMessage(message);
         return result;
     }
 
-    public static Result updateErrorWithDataAndMessage(Object data, String message) {
+    public static Result updateErrorWithMessage(String message) {
         Result result = new Result();
         result.setStatus(ResultStatus.UPDATE_ERROR);
-        result.setData(data);
         result.setMessage(message);
         return result;
     }
 
-    public static Result deleteErrorWithDataAndMessage(Object data, String message) {
+    public static Result deleteErrorWithMessage(String message) {
         Result result = new Result();
         result.setStatus(ResultStatus.DELETE_ERROR);
-        result.setData(data);
         result.setMessage(message);
         return result;
     }
 
-    public static Result parameterNotEnoughWithDataAndMessage(Object data, String message) {
+    public static Result parameterNotEnoughWithMessage(String message) {
         Result result = new Result();
         result.setStatus(ResultStatus.PARAMETER_NOT_ENOUGH);
-        result.setData(data);
         result.setMessage(message);
         return result;
     }
 
-    public static Result parameterErrorWithDataAndMessage(Object data, String message) {
+    public static Result parameterErrorWithMessage(String message) {
         Result result = new Result();
         result.setStatus(ResultStatus.PARAMETER_ERROR);
-        result.setData(data);
         result.setMessage(message);
         return result;
     }
