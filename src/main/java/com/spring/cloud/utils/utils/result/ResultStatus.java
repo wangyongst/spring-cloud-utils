@@ -2,7 +2,7 @@ package com.spring.cloud.utils.utils.result;
 
 public class ResultStatus {
 
-    //正常结果代码
+    //正常结果
     public final static int OK = 1;
 
     //查询数据失败
