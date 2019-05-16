@@ -1,6 +1,6 @@
 package com.spring.cloud.utils.utils.result;
 
-public class ResultCode {
+public class ResultStatus {
 
     //正常结果代码
     public final static int OK = 1;

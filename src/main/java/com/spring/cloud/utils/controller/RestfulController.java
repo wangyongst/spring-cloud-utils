@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @Api
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("/restful")
 public class RestfulController {
 
     @Autowired
