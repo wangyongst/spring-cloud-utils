@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/db")
 public class DbController {
 
-    @ApiOperation(value = "生成31位长度ID")
+    @ApiOperation(value = "生成32位长度ID")
     @GetMapping(value = "createId")
     public Result createId() {
         return IdUtils.createId();
