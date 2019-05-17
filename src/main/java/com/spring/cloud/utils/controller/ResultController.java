@@ -67,4 +67,16 @@ public class ResultController {
         return ResultUtil.isNullExceptionWithMessage(message);
     }
 
+    @ApiOperation(value = "Exception异常带消息")
+    @GetMapping(value = "exceptionWithMessage")
+    public Result exceptionWithMessage(@RequestParam String message) {
+        return ResultUtil.exceptionWithMessage(message);
+    }
+
+    @ApiOperation(value = "IOException异常带消息")
+    @GetMapping(value = "ioExceptionWithMessage")
+    public Result ioExceptionWithMessage(@RequestParam String message) {
+        return ResultUtil.ioExceptionWithMessage(message);
+    }
+
 }

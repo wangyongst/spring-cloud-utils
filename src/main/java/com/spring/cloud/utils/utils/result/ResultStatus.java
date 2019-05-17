@@ -25,4 +25,10 @@ public class ResultStatus {
 
     //结果为空异常
     public final static int IS_NULL_EXCEPTION = 1030;
+
+    //Exception异常
+    public final static int EXCEPTION = 1050;
+    //IO异常
+    public final static int IO_EXCEPTION = 1051;
+
 }

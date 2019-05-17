@@ -88,4 +88,18 @@ public class ResultUtil {
         result.setMessage(message);
         return result;
     }
+
+    public static Result exceptionWithMessage(String message) {
+        Result result = new Result();
+        result.setStatus(ResultStatus.EXCEPTION);
+        result.setMessage(message);
+        return result;
+    }
+
+    public static Result ioExceptionWithMessage(String message) {
+        Result result = new Result();
+        result.setStatus(ResultStatus.IO_EXCEPTION);
+        result.setMessage(message);
+        return result;
+    }
 }
